@@ -1,0 +1,26 @@
+Ubuntu Tabanlı Linux İçin Local Vagrant Kurulumu
+
+1)Öncelikle https://www.virtualbox.org/wiki/Downloads adresinden Oracle VirtualBox ve VirtualBox Extension Pack indirilir ve sırayla kurulumu yapılır.
+
+2)sonra sudo apt-get install vagrant denir ve vagrant kurulumu yapılır.
+
+3)Vagrant kurulumu yapıldıktan sonra VM'i oluşturacağımız bir klasör oluşturulur.
+
+4)Daha sonra http://www.vagrantbox.es/ adresinden herhangi bir Vagrant Box seçilir.
+
+5)Terminalde vagrant için açtığımız klasör dizinine gidilir ve sırayla ilk iki komut çalıştırılır.
+
+ vagrant box add {title} {url} //Box'ı ekler.
+ vagrant init {title} //Kullanılacak box seçilir ve kurulur.
+
+6)Daha sonra alttaki komut çalıştırılarak box ayağa kaldırılır.
+ vagrant up //Box çalıştırılır.
+
+7)Ayağa kaldırılan boxa vagrant ssh komutuyla erişim yapılır.
+ vagrant ssh //vagranta ssh bağlantısı yapılır. 
+
+8)Box'ı kapatmak için vagrant halt komutu kullanılır.
+ vagrant halt //Box sonlandırılır.
+ 
+NOTLAR:Vagrant'ın SSH portu 2222'dir. Her bir box'ın default kullanıcı adı vagrant şifresi de vagranttır.
+

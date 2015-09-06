@@ -1,0 +1,39 @@
+Ubuntu Tabanlı Linux İçin Local Mesos Kurulumu
+
+1)Öncelikle wget http://www.apache.org/dist/mesos/0.23.0/mesos-0.23.0.tar.gz komutu ile mesos sıkıştırılmış dosyası indirilir.
+
+2)tar -zxf mesos-0.23.0.tar.gz komutu ile dosya çıkartılır.
+
+3)Daha sonra aşağıdaki komutlar kullanılarak Java Kurulumu yapılır.
+
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+
+4)Daha sonra Mesos Dependencies yüklenir
+
+sudo apt-get -y install build-essential python-dev python-boto libcurl4-nss-dev libsasl2-dev maven libapr1-dev libsvn-dev
+
+5)Ön hazırlıklar tamamlandıktan sonra mesos klasörüne gidilir ve sırayla alttaki komutlar çalıştırılır.
+
+ mkdir build
+ cd build
+ ../configure
+ make
+
+6)Kurulum uzun sürebilir. Sabırlı olun :) Daha sonra kurulumu test etmek için 
+make check komutunu çalıştırın.
+
+7)Daha sonra build klasörüne gidin.
+
+Master için 
+
+sudo ./bin/mesos-master.sh --ip=127.0.0.1 --work_dir=/var/lib/mesos
+
+Slave için
+
+./bin/mesos-slave.sh --master=127.0.0.1:5050
+
+Daha sonra http://localhost:5050 diyip arayüze erişebilirsiniz
+
+Mesos Üzerine Hadoop Kurulumu
