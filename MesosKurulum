@@ -37,3 +37,10 @@ Slave için
 Daha sonra http://localhost:5050 diyip arayüze erişebilirsiniz
 
 Mesos Üzerine Hadoop Kurulumu
+
+http://sgykfjsm.github.io/blog/2014/01/10/install-hadoop-on-mesos/
+
+https://github.com/mesos/hadoop
+
+Bu sitede adım adım kurulum anlatılmıştır.
+https://open.mesosphere.com/tutorials/run-hadoop-on-mesos/#overview
