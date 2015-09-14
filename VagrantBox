@@ -1,0 +1,11 @@
+#About the box
+The Box included ubuntu-14.04 and hadoop 2.7.1
+When vagrant is up in first time, it automatically download hadoop and install it.
+The Box automatically create user/vagrant directory on hdfs, it starts hdfs and yarn on bootstrapping.
+Happy using.
+
+#Installation of box
+vagrant init girginsoft/ubuntu-hadoop; vagrant up --provider virtualbox
+
+#Box Url
+https://atlas.hashicorp.com/girginsoft/boxes/ubuntu-hadoop
